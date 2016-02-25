@@ -1,0 +1,17 @@
+../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_pkg.vhd
+../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_ftch_cmdsts_if.vhd 
+../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_ftch_noqueue.vhd 
+../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_updt_cmdsts_if.vhd
+../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_updt_noqueue.vhd 
+../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_afifo_autord.vhd
+../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_updt_sm.vhd 
+../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_updt_queue.vhd 
+../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_updt_q_mngr.vhd 
+../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_updt_mngr.vhd 
+../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_intrpt.vhd 
+../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_ftch_sm.vhd 
+../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_ftch_queue.vhd 
+../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_ftch_q_mngr.vhd 
+../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_ftch_pntr.vhd 
+../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_ftch_mngr.vhd 
+../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg.vhd 

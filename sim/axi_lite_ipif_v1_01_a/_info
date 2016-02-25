@@ -1,0 +1,155 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/wong/tlif_app_128b/sim
+Eaddress_decoder
+Z1 w1410657680
+Z2 DEx19 proc_common_v3_00_a 9 counter_f 0 22 dG38UzFKh]kTEg[h3=hFT1
+Z3 DPx19 proc_common_v3_00_a 8 ipif_pkg 0 22 :hd7Y[X0eKHi?c`BiglX30
+Z4 DPx19 proc_common_v3_00_a 14 family_support 0 22 :LB8d<M6:V8X8A=03LTZK3
+Z5 DEx19 proc_common_v3_00_a 9 pselect_f 0 22 B:A1>NmYbX];MI<k12hXf1
+Z6 DPx4 ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
+Z7 DPx4 ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z8 DPx19 proc_common_v3_00_a 15 proc_common_pkg 0 22 O[o`oBm>KdS791FmkcKO>3
+Z9 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z10 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z11 d/home/wong/tlif_app_128b/sim
+Z12 8../src/tlif_app_axi_if/axi_lite_ipif_v1_01_a/vhdl/address_decoder.vhd
+Z13 F../src/tlif_app_axi_if/axi_lite_ipif_v1_01_a/vhdl/address_decoder.vhd
+l0
+L133
+VOK1z63HiMeA=S=YN>0`jI0
+!s100 oHTaY^:iOHnkOQLPo2GOX2
+Z14 OE;C;6.6f_2;45
+32
+Z15 o-work axi_lite_ipif_v1_01_a
+Z16 tExplicit 1
+Aimp
+R5
+R3
+R4
+R6
+R7
+R8
+R9
+R10
+Z17 DEx4 work 15 address_decoder 0 22 OK1z63HiMeA=S=YN>0`jI0
+l343
+L180
+Z18 VGDH3R4[1zJ<Ho@QUMmAjc2
+Z19 !s100 7g4dOkORX:zUb5P]6IbWM0
+R14
+32
+Z20 Mx7 4 ieee 14 std_logic_1164
+Z21 Mx6 4 ieee 11 numeric_std
+Z22 Mx5 19 proc_common_v3_00_a 15 proc_common_pkg
+Z23 Mx4 4 ieee 15 std_logic_arith
+Z24 Mx3 4 ieee 18 std_logic_unsigned
+Z25 Mx2 19 proc_common_v3_00_a 14 family_support
+Z26 Mx1 19 proc_common_v3_00_a 8 ipif_pkg
+R15
+R16
+Eaxi_lite_ipif
+R1
+R3
+R4
+R8
+Z27 DPx8 synopsys 10 attributes 0 22 VD_J9_MZ<A0gTgK8RC??F0
+Z28 DPx4 ieee 14 std_logic_misc 0 22 R[AY<z9D8:K_XBEPfk6_z0
+R9
+R7
+R6
+R10
+R11
+Z29 8../src/tlif_app_axi_if/axi_lite_ipif_v1_01_a/vhdl/axi_lite_ipif.vhd
+Z30 F../src/tlif_app_axi_if/axi_lite_ipif_v1_01_a/vhdl/axi_lite_ipif.vhd
+l0
+L161
+VmDQ=Lbfa2RCjl>2jRJV073
+!s100 :fLHo[hz?O61dS?gKU1db0
+R14
+32
+R15
+R16
+Aimp
+Z31 DEx21 axi_lite_ipif_v1_01_a 16 slave_attachment 0 22 Lh=]_ogd?oCW4KN1UhU;;3
+R3
+R4
+R8
+R27
+R28
+R9
+R7
+R6
+R10
+Z32 DEx4 work 13 axi_lite_ipif 0 22 mDQ=Lbfa2RCjl>2jRJV073
+l246
+L241
+Z33 VX:3fIzLXhnTh^=Weg=hd=0
+Z34 !s100 I9KUn>8F?^m@h?O[ZA]ze1
+R14
+32
+Z35 Mx9 4 ieee 14 std_logic_1164
+Z36 Mx8 4 ieee 18 std_logic_unsigned
+Z37 Mx7 4 ieee 15 std_logic_arith
+R21
+Z38 Mx5 4 ieee 14 std_logic_misc
+Z39 Mx4 8 synopsys 10 attributes
+Z40 Mx3 19 proc_common_v3_00_a 15 proc_common_pkg
+R25
+R26
+R15
+R16
+Eslave_attachment
+Z41 w1410657682
+R2
+R4
+R3
+R8
+R27
+R28
+R7
+R6
+R9
+R10
+R11
+Z42 8../src/tlif_app_axi_if/axi_lite_ipif_v1_01_a/vhdl/slave_attachment.vhd
+Z43 F../src/tlif_app_axi_if/axi_lite_ipif_v1_01_a/vhdl/slave_attachment.vhd
+l0
+L157
+VLh=]_ogd?oCW4KN1UhU;;3
+!s100 ZcW_8dmHm5hA`;B0kcF3X2
+R14
+32
+R15
+R16
+Aimp
+Z44 DEx21 axi_lite_ipif_v1_01_a 15 address_decoder 0 22 OK1z63HiMeA=S=YN>0`jI0
+R4
+R3
+R8
+R27
+R28
+R7
+R6
+R9
+R10
+Z45 DEx4 work 16 slave_attachment 0 22 Lh=]_ogd?oCW4KN1UhU;;3
+l289
+L230
+Z46 Vcm]N]G1L=^6=L23P^F^U=2
+Z47 !s100 2K6l_BM3M_X`W3Vm[M8^32
+R14
+32
+R35
+Z48 Mx8 4 ieee 11 numeric_std
+Z49 Mx7 4 ieee 18 std_logic_unsigned
+Z50 Mx6 4 ieee 15 std_logic_arith
+R38
+R39
+R40
+Z51 Mx2 19 proc_common_v3_00_a 8 ipif_pkg
+Z52 Mx1 19 proc_common_v3_00_a 14 family_support
+R15
+R16

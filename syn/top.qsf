@@ -1,0 +1,517 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2009 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II
+# Version 9.1 Build 222 10/21/2009 SJ Full Version
+# Date created = 17:36:30  March 22, 2011
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		pcie_example_chaining_top_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Stratix IV"
+set_global_assignment -name DEVICE EP4SGX70HF35C2
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 9.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:36:30  MARCH 22, 2011"
+set_global_assignment -name LAST_QUARTUS_VERSION "11.1 SP2"
+set_global_assignment -name TOP_LEVEL_ENTITY top
+set_global_assignment -name SEARCH_PATH ../src/pcie/lib/
+set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING ON
+set_global_assignment -name ENABLE_CLOCK_LATENCY ON
+set_global_assignment -name ENABLE_RECOVERY_REMOVAL_ANALYSIS ON
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+
+# src/top 
+set_global_assignment -name VERILOG_FILE ../src/top.v
+set_global_assignment -name VERILOG_FILE ../src/pcie_top.v
+set_global_assignment -name VERILOG_FILE ../src/axi_pcie.v
+set_global_assignment -name VERILOG_FILE ../src/dma_loop_fifo.v
+set_global_assignment -name VERILOG_FILE ../src/system_axi4lite.v
+
+# src/axi_dma
+set_global_assignment -name VHDL_FILE ../src/axi_dma_v6_00_a/hdl/vhdl/axi_dma_afifo_autord.vhd -library axi_dma_v6_00_a
+set_global_assignment -name VHDL_FILE ../src/axi_dma_v6_00_a/hdl/vhdl/axi_dma_pkg.vhd -library axi_dma_v6_00_a
+set_global_assignment -name VHDL_FILE ../src/axi_dma_v6_00_a/hdl/vhdl/axi_dma_skid_buf.vhd -library axi_dma_v6_00_a
+set_global_assignment -name VHDL_FILE ../src/axi_dma_v6_00_a/hdl/vhdl/axi_dma_lite_if.vhd -library axi_dma_v6_00_a
+set_global_assignment -name VHDL_FILE ../src/axi_dma_v6_00_a/hdl/vhdl/axi_dma_reset.vhd -library axi_dma_v6_00_a
+set_global_assignment -name VHDL_FILE ../src/axi_dma_v6_00_a/hdl/vhdl/axi_dma_mm2s_cntrl_strm.vhd -library axi_dma_v6_00_a
+set_global_assignment -name VHDL_FILE ../src/axi_dma_v6_00_a/hdl/vhdl/axi_dma_mm2s_cmdsts_if.vhd -library axi_dma_v6_00_a
+set_global_assignment -name VHDL_FILE ../src/axi_dma_v6_00_a/hdl/vhdl/axi_dma_s2mm_cmdsts_if.vhd -library axi_dma_v6_00_a
+set_global_assignment -name VHDL_FILE ../src/axi_dma_v6_00_a/hdl/vhdl/axi_dma_sofeof_gen.vhd -library axi_dma_v6_00_a
+set_global_assignment -name VHDL_FILE ../src/axi_dma_v6_00_a/hdl/vhdl/axi_dma_smple_sm.vhd -library axi_dma_v6_00_a
+set_global_assignment -name VHDL_FILE ../src/axi_dma_v6_00_a/hdl/vhdl/axi_dma_s2mm_sts_strm.vhd -library axi_dma_v6_00_a
+set_global_assignment -name VHDL_FILE ../src/axi_dma_v6_00_a/hdl/vhdl/axi_dma_s2mm_sts_mngr.vhd -library axi_dma_v6_00_a
+set_global_assignment -name VHDL_FILE ../src/axi_dma_v6_00_a/hdl/vhdl/axi_dma_s2mm_sm.vhd -library axi_dma_v6_00_a
+set_global_assignment -name VHDL_FILE ../src/axi_dma_v6_00_a/hdl/vhdl/axi_dma_s2mm_sg_if.vhd -library axi_dma_v6_00_a
+set_global_assignment -name VHDL_FILE ../src/axi_dma_v6_00_a/hdl/vhdl/axi_dma_s2mm_mngr.vhd -library axi_dma_v6_00_a
+set_global_assignment -name VHDL_FILE ../src/axi_dma_v6_00_a/hdl/vhdl/axi_dma_s2mm.vhd -library axi_dma_v6_00_a
+set_global_assignment -name VHDL_FILE ../src/axi_dma_v6_00_a/hdl/vhdl/axi_dma_rst_module.vhd -library axi_dma_v6_00_a
+set_global_assignment -name VHDL_FILE ../src/axi_dma_v6_00_a/hdl/vhdl/axi_dma_register_s2mm.vhd -library axi_dma_v6_00_a
+set_global_assignment -name VHDL_FILE ../src/axi_dma_v6_00_a/hdl/vhdl/axi_dma_register.vhd -library axi_dma_v6_00_a
+set_global_assignment -name VHDL_FILE ../src/axi_dma_v6_00_a/hdl/vhdl/axi_dma_reg_module.vhd -library axi_dma_v6_00_a
+set_global_assignment -name VHDL_FILE ../src/axi_dma_v6_00_a/hdl/vhdl/axi_dma_mm2s_sts_mngr.vhd -library axi_dma_v6_00_a
+set_global_assignment -name VHDL_FILE ../src/axi_dma_v6_00_a/hdl/vhdl/axi_dma_mm2s_sm.vhd -library axi_dma_v6_00_a
+set_global_assignment -name VHDL_FILE ../src/axi_dma_v6_00_a/hdl/vhdl/axi_dma_mm2s_sg_if.vhd -library axi_dma_v6_00_a
+set_global_assignment -name VHDL_FILE ../src/axi_dma_v6_00_a/hdl/vhdl/axi_dma_mm2s_mngr.vhd -library axi_dma_v6_00_a
+set_global_assignment -name VHDL_FILE ../src/axi_dma_v6_00_a/hdl/vhdl/axi_dma_cmd_split.vhd -library axi_dma_v6_00_a
+set_global_assignment -name VHDL_FILE ../src/axi_dma_v6_00_a/hdl/vhdl/axi_dma.vhd -library axi_dma_v6_00_a
+# src/user_lib
+set_global_assignment -name VERILOG_FILE ../src/user_lib/verilog/pll.v
+set_global_assignment -name VERILOG_FILE ../src/user_lib/verilog/fifo.v
+set_global_assignment -name VERILOG_FILE ../src/user_lib/verilog/asyn_fifo.v
+
+# src/pcie phy
+set_global_assignment -name VERILOG_FILE ../src/pcie/verilog/pcie_core.v
+set_global_assignment -name VERILOG_FILE ../src/pcie/verilog/pcie_serdes.v
+set_global_assignment -name VERILOG_FILE ../src/pcie/verilog/pcie.v
+set_global_assignment -name VERILOG_FILE ../src/pcie/verilog/altpcierd_cplerr_lmi.v
+set_global_assignment -name VERILOG_FILE ../src/pcie/verilog/altpcierd_tl_cfg_sample.v
+set_global_assignment -name VERILOG_FILE ../src/pcie/verilog/altpcie_reconfig_4sgx.v
+set_global_assignment -name VERILOG_FILE ../src/pcie/verilog/altpcie_pll_100_250.v
+set_global_assignment -name VERILOG_FILE ../src/pcie/verilog/altpcie_pll_125_250.v
+set_global_assignment -name VERILOG_FILE ../src/pcie/verilog/pcie_rs_hip.v
+set_global_assignment -name VERILOG_FILE ../src/pcie/verilog/altpcie_rs_serdes.v
+
+
+#1:src/tlif_app_axi_if/Avalon2Axi
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/my_cores/Avalon2Axi/verilog/Avalon2Axi.v
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/my_cores/Avalon2Axi/verilog/Avalon_rx.v
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/my_cores/Avalon2Axi/verilog/Avalon_rx_align.v
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/my_cores/Avalon2Axi/verilog/Rx_fifo_control.v
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/my_cores/Avalon2Axi/verilog/Avalon_tx.v
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/my_cores/Avalon2Axi/verilog/Avalon_tx_align.v
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/my_cores/Avalon2Axi/verilog/Tx_fifo_control.v
+
+#1:src/tlif_app_axi_if/conv
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/conv/rx/axi_enhanced_rx.v
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/conv/rx/axi_enhanced_rx_pipeline.v
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/conv/rx/axi_enhanced_rx_demux.v
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/conv/rx/axi_enhanced_rx_destraddler.v
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/conv/rx/axi_enhanced_rx_null_gen.v
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/conv/tx/axi_enhanced_tx.v
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/conv/tx/axi_enhanced_tx_pipeline.v
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/conv/tx/axi_enhanced_tx_arbiter.v
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/conv/tx/axi_enhanced_tx_port_mux.v
+
+
+#src/tlif_app_axi_if/my_cores/debug/
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/my_cores/debug/tlp_win_bram.v
+#set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/my_cores/debug/tx_debug.v
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/my_cores/debug/debug_reg_top.v
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/my_cores/debug/debug_bram_top.v
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/my_cores/debug/block_ram.v
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/my_cores/debug/axi_mm_if.vhd
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/my_cores/debug/sft_rst_out.v
+
+
+#2:src/tlif_app_axi_if/int_del
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/int_del/verilog/int_del.v
+
+#3:src/tlif_app_axi_if/axi_pcie_mm_s_v1_03_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_pcie_mm_s_v1_03_a/verilog/carry_and.v -library axi_pcie_mm_s_v1_03_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_pcie_mm_s_v1_03_a/verilog/carry_latch_and.v -library axi_pcie_mm_s_v1_03_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_pcie_mm_s_v1_03_a/verilog/carry_latch_or.v -library axi_pcie_mm_s_v1_03_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_pcie_mm_s_v1_03_a/verilog/carry_or.v -library axi_pcie_mm_s_v1_03_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_pcie_mm_s_v1_03_a/verilog/comparator.v -library axi_pcie_mm_s_v1_03_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_pcie_mm_s_v1_03_a/verilog/comparator_sel.v -library axi_pcie_mm_s_v1_03_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_pcie_mm_s_v1_03_a/verilog/comparator_sel_static.v -library axi_pcie_mm_s_v1_03_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_pcie_mm_s_v1_03_a/verilog/command_fifo.v -library axi_pcie_mm_s_v1_03_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_pcie_mm_s_v1_03_a/verilog/axic_register_slice.v -library axi_pcie_mm_s_v1_03_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_pcie_mm_s_v1_03_a/verilog/axi_register_slice.v -library axi_pcie_mm_s_v1_03_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_pcie_mm_s_v1_03_a/verilog/a_upsizer.v -library axi_pcie_mm_s_v1_03_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_pcie_mm_s_v1_03_a/verilog/w_upsizer.v -library axi_pcie_mm_s_v1_03_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_pcie_mm_s_v1_03_a/verilog/r_upsizer.v -library axi_pcie_mm_s_v1_03_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_pcie_mm_s_v1_03_a/verilog/axi_upsizer.v -library axi_pcie_mm_s_v1_03_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_pcie_mm_s_v1_03_a/vhdl/axi_pcie_mm_s_pkg.vhd -library axi_pcie_mm_s_v1_03_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_pcie_mm_s_v1_03_a/vhdl/axi_slave_read.vhd -library axi_pcie_mm_s_v1_03_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_pcie_mm_s_v1_03_a/vhdl/axi_slave_write.vhd -library axi_pcie_mm_s_v1_03_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_pcie_mm_s_v1_03_a/vhdl/slave_read_req_tlp.vhd -library axi_pcie_mm_s_v1_03_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_pcie_mm_s_v1_03_a/vhdl/slave_read_cpl_tlp.vhd -library axi_pcie_mm_s_v1_03_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_pcie_mm_s_v1_03_a/vhdl/slave_write_req_tlp.vhd -library axi_pcie_mm_s_v1_03_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_pcie_mm_s_v1_03_a/vhdl/slave_bridge.vhd -library axi_pcie_mm_s_v1_03_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_pcie_mm_s_v1_03_a/vhdl/axi_s_masterbridge_wr.vhd -library axi_pcie_mm_s_v1_03_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_pcie_mm_s_v1_03_a/vhdl/axi_mm_masterbridge_wr.vhd -library axi_pcie_mm_s_v1_03_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_pcie_mm_s_v1_03_a/vhdl/axi_mm_s_masterbridge_wr.vhd -library axi_pcie_mm_s_v1_03_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_pcie_mm_s_v1_03_a/vhdl/axi_s_masterbridge_rd.vhd -library axi_pcie_mm_s_v1_03_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_pcie_mm_s_v1_03_a/vhdl/axi_mm_masterbridge_rd.vhd -library axi_pcie_mm_s_v1_03_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_pcie_mm_s_v1_03_a/vhdl/axi_mm_s_masterbridge_rd.vhd -library axi_pcie_mm_s_v1_03_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_pcie_mm_s_v1_03_a/vhdl/axi_mm_s_masterbridge.vhd -library axi_pcie_mm_s_v1_03_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_pcie_mm_s_v1_03_a/vhdl/register_block.vhd -library axi_pcie_mm_s_v1_03_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_pcie_mm_s_v1_03_a/vhdl/axi_pcie_mm_s.vhd -library axi_pcie_mm_s_v1_03_a
+
+#4:src/tlif_app_axi_if/axi_lite_ipif_v1_01_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_lite_ipif_v1_01_a/vhdl/address_decoder.vhd -library axi_lite_ipif_v1_01_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_lite_ipif_v1_01_a/vhdl/slave_attachment.vhd -library axi_lite_ipif_v1_01_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_lite_ipif_v1_01_a/vhdl/axi_lite_ipif.vhd -library axi_lite_ipif_v1_01_a
+
+#5:src/tlif_app_axi_if/proc_common_v3_00_b
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/proc_common_v3_00_b/verilog/blk_mem_gen_wrapper.v -library axi_pcie_mm_s_v1_03_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/proc_common_v3_00_b/verilog/sync_fifo_fg.v -library axi_pcie_mm_s_v1_03_a
+
+#6:src/tlif_app_axi_if/proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/proc_common_pkg.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/inferred_lut4.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/pf_counter_bit.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/family_support.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/muxf_struct_f.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/pf_occ_counter.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/pf_occ_counter_top.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/dynshreg_f.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/family.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/dynshreg2_f.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/pf_counter.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/pf_counter_top.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/pf_adder.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/coregen_comp_defs.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/async_fifo_fg.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/cntr_incr_decr_addn_f.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/xor_f.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/valid_be.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/sync_fifo_fg.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/srl_fifo_rbu_f.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/srl_fifo_rbu2_f.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/srl_fifo_rbu.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/srl_fifo_f.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/srl_fifo3.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/srl_fifo2.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/srl_fifo.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/srl16_fifo.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/soft_reset.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/pselect_mask.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/pselect.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/pf_dpram_select.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/pf_adder_bit.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/blk_mem_gen_wrapper.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/or_with_enable_f.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/or_muxcy_f.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/or_muxcy.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/or_gate_f.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/or_gate128.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/or_gate.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/or_bits.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/mux_onehot_f.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/mux_onehot.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg2.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/ipif_steer128.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/ipif_steer.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/ipif_pkg.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/ipif_mirror128.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/eval_timer.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/dynshreg_i_f.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/down_counter.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/direct_path_cntr_ai.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/direct_path_cntr.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/counter_bit.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/counter.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/conv_funs_pkg.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/compare_vectors_f.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/common_types_pkg.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/basic_sfifo_fg.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/proc_common_v3_00_a/hdl/vhdl/addsub.vhd -library proc_common_v3_00_a
+#7:src/tlif_app_axi_if/axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_dre_mux8_1_x_n.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_dre_mux4_1_x_n.vhd -library axi_datamover_v4_00_a
+  
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_dre_mux2_1_x_n.vhd -library axi_datamover_v4_00_a
+
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_afifo_autord.vhd -library axi_datamover_v4_00_a
+
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_sfifo_autord.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_fifo.vhd -library axi_datamover_v4_00_a
+ 
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_skid_buf.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_stbs_set.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_strb_gen2.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_mm2s_dre.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_addr_cntl.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_indet_btt.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_ibttcc.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_pcc.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_cmd_status.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_reset.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_s2mm_dre.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_ms_strb_set.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_mssai_skid_buf.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_wrdata_cntl.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_wr_status_cntl.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_wr_sf.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_wr_demux.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_skid2mm_buf.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_scc.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_s2mm_scatter.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_s2mm_realign.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_s2mm_omit_wrap.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_s2mm_full_wrap.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_s2mm_basic_wrap.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_rdmux.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_rddata_cntl.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_rd_status_cntl.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_rd_sf.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_mm2s_omit_wrap.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_mm2s_full_wrap.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover_mm2s_basic_wrap.vhd -library axi_datamover_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_datamover_v4_00_a/hdl/vhdl/axi_datamover.vhd -library axi_datamover_v4_00_a
+
+#9:src/tlif_app_axi_if/axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_wdata_router.v -library axi_interconnect_v1_06_a
+  
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_wdata_mux.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_w_upsizer.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_w_downsizer.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_w_axi3_conv.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_splitter.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_si_transactor.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_register_slice_bank.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_r_upsizer.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_r_downsizer.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_r_axi3_conv.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_protocol_conv_bank.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_nto1_mux.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_ndeep_srl.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_mux_enc.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_mux.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_fifo_gen.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_decerr_slave.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_data_fifo_bank.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_crossbar_sasd.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_crossbar.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_converter_bank.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_comparator_static.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_comparator_sel_static.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_comparator_sel_mask_static.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_comparator_sel_mask.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_comparator_sel.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_comparator_mask_static.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_comparator_mask.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_comparator.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_command_fifo.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_carry_or.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_carry_latch_or.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_carry_latch_and.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_carry_and.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_carry.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_b_downsizer.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_axilite_conv.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_axic_sync_clock_converter.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_axic_srl_fifo.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_axic_sample_cycle_ratio.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_axic_register_slice.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_axic_reg_srl_fifo.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_axic_fifo.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_axi_upsizer.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_axi_register_slice.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_axi_protocol_converter.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_axi_downsizer.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_axi_data_fifo.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_axi_crossbar.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_axi_clock_converter.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_axi3_conv.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_arbiter_resp.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_addr_decoder.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_addr_arbiter_sasd.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_addr_arbiter.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_a_upsizer.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_a_downsizer.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/ict106_a_axi3_conv.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/axi_interconnect_v1_06_a.v -library axi_interconnect_v1_06_a
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/axi_interconnect_v1_06_a/hdl/verilog/axi_interconnect.v -library axi_interconnect_v1_06_a
+
+#10:#9:src/tlif_app_axi_if/fifo_generator_v8_3
+set_global_assignment -name VERILOG_FILE ../src/tlif_app_axi_if/fifo_generator_v8_3/alt_fifo_gen.v -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/fifo_generator_v8_3/async_fifo_gen.vhd -library proc_common_v3_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/fifo_generator_v8_3/sync_fifo_gen.vhd -library proc_common_v3_00_a
+
+#9:src/tlif_app_axi_if/axi_sg_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_pkg.vhd -library axi_sg_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_ftch_cmdsts_if.vhd -library axi_sg_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_ftch_noqueue.vhd -library axi_sg_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_updt_cmdsts_if.vhd -library axi_sg_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_updt_noqueue.vhd -library axi_sg_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_afifo_autord.vhd -library axi_sg_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_updt_sm.vhd -library axi_sg_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_updt_queue.vhd -library axi_sg_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_updt_q_mngr.vhd -library axi_sg_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_updt_mngr.vhd -library axi_sg_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_intrpt.vhd -library axi_sg_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_ftch_sm.vhd -library axi_sg_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_ftch_queue.vhd -library axi_sg_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_ftch_q_mngr.vhd -library axi_sg_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_ftch_pntr.vhd -library axi_sg_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg_ftch_mngr.vhd -library axi_sg_v4_00_a
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/axi_sg_v4_00_a/hdl/vhdl/axi_sg.vhd -library axi_sg_v4_00_a
+
+#11:#9:src/tlif_app_axi_if/unisims
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/unisims/unisim_VPKG.vhd -library unisim
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/unisims/unisim_VCOMP.vhd -library unisim
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/unisims/primitive/XORCY.vhd -library unisim
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/unisims/primitive/SRLC32E.vhd -library unisim
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/unisims/primitive/SRLC16E.vhd -library unisim
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/unisims/primitive/OR2L.vhd -library unisim
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/unisims/primitive/MUXCY_L.vhd -library unisim
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/unisims/primitive/MUXCY.vhd -library unisim
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/unisims/primitive/LUT6_2.vhd -library unisim
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/unisims/primitive/LUT6.vhd -library unisim
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/unisims/primitive/LUT4.vhd -library unisim
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/unisims/primitive/FDSE.vhd -library unisim
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/unisims/primitive/FDS.vhd -library unisim
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/unisims/primitive/FDRE.vhd -library unisim
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/unisims/primitive/AND2B1L.vhd -library unisim
+set_global_assignment -name VHDL_FILE ../src/tlif_app_axi_if/unisims/primitive/MUXF7.vhd -library unisim
+
+# pin
+set_location_assignment PIN_C5 -to linkdown
+set_location_assignment PIN_AA28 -to pcie_rstn
+set_location_assignment PIN_AP31 -to fan_con
+
+set_location_assignment PIN_U26 -to free_100MHz
+set_location_assignment PIN_AD33 -to refclk
+set_location_assignment PIN_AH33 -to pci_exp_rxp[0]
+set_location_assignment PIN_AF33 -to pci_exp_rxp[1]
+set_location_assignment PIN_Y33 -to pci_exp_rxp[2]
+set_location_assignment PIN_V33 -to pci_exp_rxp[3]
+#set_location_assignment PIN_T33 -to pci_exp_rxp[4]
+#set_location_assignment PIN_P33 -to pci_exp_rxp[5]
+#set_location_assignment PIN_H33 -to pci_exp_rxp[6]
+#set_location_assignment PIN_F33 -to pci_exp_rxp[7]
+
+set_location_assignment PIN_AG31 -to pci_exp_txp[0]
+set_location_assignment PIN_AE31 -to pci_exp_txp[1]
+set_location_assignment PIN_W31 -to pci_exp_txp[2]
+set_location_assignment PIN_U31 -to pci_exp_txp[3]
+#set_location_assignment PIN_R31 -to pci_exp_txp[4]
+#set_location_assignment PIN_N31 -to pci_exp_txp[5]
+#set_location_assignment PIN_G31 -to pci_exp_txp[6]
+#set_location_assignment PIN_E31 -to pci_exp_txp[7]
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to linkdown
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pcie_rstn
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to fan_con
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to free_100MHz
+set_instance_assignment -name IO_STANDARD LVDS -to refclk
+set_instance_assignment -name INPUT_TERMINATION "OCT 100 OHMS" -to refclk
+
+
+set_instance_assignment -name IO_STANDARD "1.4-V PCML" -to pci_exp_rxp[0]
+set_instance_assignment -name IO_STANDARD "1.4-V PCML" -to pci_exp_rxp[1]
+set_instance_assignment -name IO_STANDARD "1.4-V PCML" -to pci_exp_rxp[2]
+set_instance_assignment -name IO_STANDARD "1.4-V PCML" -to pci_exp_rxp[3]
+set_instance_assignment -name IO_STANDARD "1.4-V PCML" -to pci_exp_txp[0]
+set_instance_assignment -name IO_STANDARD "1.4-V PCML" -to pci_exp_txp[1]
+set_instance_assignment -name IO_STANDARD "1.4-V PCML" -to pci_exp_txp[2]
+set_instance_assignment -name IO_STANDARD "1.4-V PCML" -to pci_exp_txp[3]
+
+# timming 
+set_global_assignment -name SDC_FILE top.sdc
+set_global_assignment -name SDC_FILE ../src/pcie/pcie_sdc/pcie.sdc
+
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 0.9V
+set_global_assignment -name VCCA_L_USER_VOLTAGE 2.5V
+set_global_assignment -name VCCA_R_USER_VOLTAGE 2.5V
+set_global_assignment -name VCCH_GXBL_USER_VOLTAGE 1.4V
+set_global_assignment -name VCCH_GXBR_USER_VOLTAGE 1.4V
+set_global_assignment -name POWER_HSSI_VCCHIP_LEFT "Opportunistically power off"
+set_global_assignment -name POWER_HSSI_VCCHIP_RIGHT "Opportunistically power off"
+set_global_assignment -name POWER_HSSI_LEFT "Opportunistically power off"
+set_global_assignment -name POWER_HSSI_RIGHT "Opportunistically power off"
+
+#set_global_assignment -name USE_SIGNALTAP_FILE stp_pcie.stp
+set_global_assignment -name ENABLE_SIGNALTAP ON
+set_global_assignment -name OPTIMIZATION_TECHNIQUE SPEED
+set_global_assignment -name STRATIXII_OPTIMIZATION_TECHNIQUE SPEED
+set_global_assignment -name CYCLONE_OPTIMIZATION_TECHNIQUE SPEED
+set_global_assignment -name CYCLONEII_OPTIMIZATION_TECHNIQUE SPEED
+set_global_assignment -name STRATIX_OPTIMIZATION_TECHNIQUE SPEED
+set_global_assignment -name MAXII_OPTIMIZATION_TECHNIQUE SPEED
+set_global_assignment -name ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP ON
+set_global_assignment -name MUX_RESTRUCTURE OFF
+set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_RETIMING ON
+set_global_assignment -name ROUTER_TIMING_OPTIMIZATION_LEVEL MAXIMUM
+set_global_assignment -name AUTO_PACKED_REGISTERS_STRATIXII NORMAL
+set_global_assignment -name AUTO_PACKED_REGISTERS_MAXII NORMAL
+set_global_assignment -name AUTO_PACKED_REGISTERS_CYCLONE NORMAL
+set_global_assignment -name AUTO_PACKED_REGISTERS NORMAL
+set_global_assignment -name AUTO_PACKED_REGISTERS_STRATIX NORMAL
+
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+
+
+
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+
+
+set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
+
+set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
+set_global_assignment -name TIMEQUEST_DO_CCPP_REMOVAL ON
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED"
+
+
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+
+
+
+
+
+set_global_assignment -name QIP_FILE ../src/user_lib/verilog/pll.qip
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

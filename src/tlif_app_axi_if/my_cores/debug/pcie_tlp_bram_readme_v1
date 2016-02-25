@@ -1,0 +1,65 @@
+x  x  x  x x  x  x  x x  x  x  x x  x  x  x x  x  x  xx  x  x  x x  x  x  x x  x  x  x x  x  x  x x  x  x  x
+
+读BRAM
+/*************************************************************/
+bar0：偏移20位[19:0]
+
+
+
+raddr[18]=1;选择读取rx bram
+raddr[18]=0;选择读取tx bram
+
+bram每个地址读三次
+raddr[17:16]=0;固定32'h12345678
+raddr[17:16]=1;读取bram地址的第一组 r_data[95:64]
+raddr[17:16]=2;读取bram地址的第一组 r_data[63:32]
+raddr[17:16]=3;读取bram地址的第一组 r_data[31:0]
+
+raddr[15:2];bram的地址偏移;即[13:0],共14位
+/*************************************************************/
+st_data0    = r_data[95:32]
+st_be0[7:0] = r_data[31:24]
+st_sop0     = r_data[23]
+st_eop0     = r_data[22]
+st_ready0   = r_data[21] 
+bram_sel    = r_data[12] = raddr[18]
+counter     = r_data[11:0]
+
+type        = r_data[63:56] && (st_sop0 = 1)   =st_data0[31:24]->40;00;4a
+
+tag         = r_data[79:72] && (st_sop0 = 1)   =st_data0[47:40]（读写请求包）
+tag         = r_data[47:40] && (st_sop0 = 1)的下一个时钟 =st_data0[15:8]（读写请求包）
+
+length      = r_data[41:32] && (st_sop0 = 1)   =st_data0[9:0]
+
+address     = r_data[63:32] && (st_sop0 = 1)的下一个时钟 = st_data0[31:0]    
+
+
+
+
+ 
+/*************************************************************/
+
+x  x  x  x x  x  x  x x  x  x  x x  x  x  x x  x  x  xx  x  x  x x  x  x  x x  x  x  x x  x  x  x x  x  x  x
+写寄存器
+偏移：8_0000 写入0000_0001为bram addr软复位;硬件自清
+
+x  x  x  x x  x  x  x x  x  x  x x  x  x  x x  x  x  xx  x  x  x x  x  x  x x  x  x  x x  x  x  x x  x  x  x
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
